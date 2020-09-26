@@ -1,27 +1,83 @@
 @import "../styles.scss";
 
-.search-container{
+header {
+  position: sticky;
+  top: 0;
+  background: #FAFAFA;
+  
+  .search-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    margin-left: 8px;
+  
     .form-container {
-        width: 100%;
-        padding: 39px 0;
-        display: flex;
-        flex-direction: column;
-    
-        .input-form {
-          height: 44px;
-          margin: 6px 0;
-          padding: 0 15px;
-          background-color: $background-secondary;
-          border: 0.5px solid #0000001a;
-          border-radius: 5px;
-    
-          &:focus {
-            outline: none;
-          }
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-top: 4px;
+      margin-bottom: 9px;
+      
+      .input-form {
+        height: 36px;  
+        padding: 0 34px;
+        width: 327px;
+        background: rgba(118, 118, 128, 0.12);
+        border: 0.5px solid #0000001a;
+        border-radius: 10px;
+        background-image: url('../../../assets/icon/search-icon.png') ;
+        background-repeat: no-repeat;
+      
+        &:focus {
+          outline: none;
+        }
+      }
+  
+      .live-img {
+        margin: 0 10px;
+        width: 20px;
+        height: 20px;
+        align-self: center;
+        cursor: pointer;
+      }
+    }
+  
+    .btn-container {
+      margin-bottom: 7px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+  
+      .btn-search{
+        padding: 0 10px;
+        margin-right: 6px;
+        background: #FFFFFF;
+        border-radius: 6px;
+        border: 1px solid rgba(60, 60, 67, 0.18);
+        box-sizing: border-box;
+        height: 32px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: -0.2px;
+        color: #262626;
+      }
+        .img {
+          margin: 6px 0px;
         }
     }
+  }
 }
+
+.img-container {
+  .search-img-container {
+    .search-img {
+      width: 120px;
+      height: 119.53px;
+      margin: 0px 0px;
+      border: 1px solid  rgba(60, 60, 67, 0.18);;
+    }  
+  }
+}
+
+
