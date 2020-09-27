@@ -16,6 +16,15 @@ header {
       flex-direction: row;
       margin-top: 4px;
       margin-bottom: 9px;
+      position: relative;
+
+      .search-icon {
+        position: absolute;
+        width: 14px;
+        height: auto;
+        top: 11.3px;
+        left: 11.3px;
+    }
       
       .input-form {
         height: 36px;  
@@ -24,8 +33,6 @@ header {
         background: rgba(118, 118, 128, 0.12);
         border: 0.5px solid #0000001a;
         border-radius: 10px;
-        background-image: url('../../../assets/icon/search-icon.png') ;
-        background-repeat: no-repeat;
       
         &:focus {
           outline: none;

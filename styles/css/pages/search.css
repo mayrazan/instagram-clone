@@ -59,6 +59,14 @@ header .search-container .form-container {
   flex-direction: row;
   margin-top: 4px;
   margin-bottom: 9px;
+  position: relative;
+}
+header .search-container .form-container .search-icon {
+  position: absolute;
+  width: 14px;
+  height: auto;
+  top: 11.3px;
+  left: 11.3px;
 }
 header .search-container .form-container .input-form {
   height: 36px;
@@ -67,8 +75,6 @@ header .search-container .form-container .input-form {
   background: rgba(118, 118, 128, 0.12);
   border: 0.5px solid #0000001a;
   border-radius: 10px;
-  background-image: url("../../../assets/icon/search-icon.png");
-  background-repeat: no-repeat;
 }
 header .search-container .form-container .input-form:focus {
   outline: none;
