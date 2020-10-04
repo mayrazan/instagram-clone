@@ -15,8 +15,6 @@ p {
 }
 
 body {
-  max-width: 375px;
-  margin: auto;
   background-color: #fafafa;
 }
 
@@ -39,6 +37,11 @@ body {
   padding: 10px 0;
   border-top: 1px solid #e2e2e2;
 }
+@media (min-width: 768px) {
+  .tab-bar {
+    display: none;
+  }
+}
 .tab-bar .action-icon {
   width: 22px;
 }
@@ -47,6 +50,62 @@ header {
   position: sticky;
   top: 0;
   background: #FAFAFA;
+}
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 5px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #e2e2e2;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+}
+header .logo-div {
+  display: none;
+}
+@media (min-width: 768px) {
+  header .logo-div {
+    display: block;
+    position: sticky;
+    float: left;
+    left: 13rem;
+  }
+}
+header .logo-div .logo-img {
+  display: none;
+}
+@media (min-width: 768px) {
+  header .logo-div .logo-img {
+    display: block;
+    width: 105px;
+  }
+}
+header .div-icons {
+  display: none;
+}
+@media (min-width: 768px) {
+  header .div-icons {
+    display: flex;
+    align-self: center;
+    position: absolute;
+    left: 58rem;
+  }
+}
+header .div-icons .icons {
+  display: none;
+}
+@media (min-width: 768px) {
+  header .div-icons .icons {
+    display: flex;
+    padding: 0 9px;
+    position: sticky;
+    cursor: pointer;
+  }
 }
 header .search-container {
   display: flex;
@@ -61,12 +120,28 @@ header .search-container .form-container {
   margin-bottom: 9px;
   position: relative;
 }
+@media (min-width: 768px) {
+  header .search-container .form-container {
+    display: flex;
+    position: relative;
+    right: 28rem;
+  }
+}
 header .search-container .form-container .search-icon {
   position: absolute;
   width: 14px;
   height: auto;
   top: 11.3px;
   left: 11.3px;
+}
+@media (min-width: 768px) {
+  header .search-container .form-container .search-icon {
+    text-align: center;
+    width: 11px;
+    height: auto;
+    top: 9.1px;
+    left: 74px;
+  }
 }
 header .search-container .form-container .input-form {
   height: 36px;
@@ -79,6 +154,14 @@ header .search-container .form-container .input-form {
 header .search-container .form-container .input-form:focus {
   outline: none;
 }
+@media (min-width: 768px) {
+  header .search-container .form-container .input-form {
+    height: 25px;
+    text-align: center;
+    width: 150px;
+    border-radius: 3px;
+  }
+}
 header .search-container .form-container .live-img {
   margin: 0 10px;
   width: 20px;
@@ -86,11 +169,23 @@ header .search-container .form-container .live-img {
   align-self: center;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  header .search-container .form-container .live-img {
+    display: none;
+  }
+}
 header .search-container .btn-container {
   margin-bottom: 7px;
   display: flex;
   align-items: flex-start;
   flex-direction: row;
+}
+@media (min-width: 768px) {
+  header .search-container .btn-container {
+    display: flex;
+    position: relative;
+    right: 32rem;
+  }
 }
 header .search-container .btn-container .btn-search {
   padding: 0 10px;
@@ -107,15 +202,42 @@ header .search-container .btn-container .btn-search {
   letter-spacing: -0.2px;
   color: #262626;
 }
+header .search-container .btn-container .btn-search:focus {
+  outline: none;
+}
 header .search-container .btn-container .img {
   margin: 6px 0px;
 }
 
+@media (min-width: 768px) {
+  .img-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-content: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .img-container .search-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50%;
+    height: auto;
+  }
+}
 .img-container .search-img-container .search-img {
   width: 120px;
   height: 119.53px;
   margin: 0px 0px;
   border: 1px solid rgba(60, 60, 67, 0.18);
+}
+@media (min-width: 768px) {
+  .img-container .search-img-container .search-img {
+    display: flex;
+    width: 220px;
+    height: 200px;
+  }
 }
 
 /*# sourceMappingURL=search.css.map */

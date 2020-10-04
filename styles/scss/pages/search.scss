@@ -4,7 +4,58 @@ header {
   position: sticky;
   top: 0;
   background: #FAFAFA;
+
+  @media ($desktop-breakpoint) {
+    @include simple-flex(space-between, center, row);
+    width: 100%;
+    padding-top: 5px;
+    background-color: $background-secondary;
+    border-bottom: 1px solid #e2e2e2;
+    z-index: 1;
+    box-sizing: border-box;   
+ }
+
+  .logo-div {
+    display: none;
+    
+    @media ($desktop-breakpoint) {
+      display: block;
+      position: sticky;
+      float: left;
+      left: 13rem;
+    }
+    .logo-img {
+      display: none;
   
+      @media ($desktop-breakpoint) {
+        display: block;
+        width: 105px;
+      }
+    }
+  }
+  
+  .div-icons {
+    display: none;
+
+    @media ($desktop-breakpoint) {
+      display: flex;
+      align-self: center;
+      position: absolute;
+      left: 58rem;
+    } 
+    .icons {
+      display: none;    
+
+      @media ($desktop-breakpoint) {
+        display: flex;
+        padding: 0 9px;
+        position: sticky;   
+        cursor: pointer; 
+      }
+    }
+  }  
+  
+
   .search-container {
     display: flex;
     flex-direction: column;
@@ -18,12 +69,26 @@ header {
       margin-bottom: 9px;
       position: relative;
 
+      @media ($desktop-breakpoint) {
+        display: flex;
+        position: relative;
+        right: 28rem;
+      }
+
       .search-icon {
         position: absolute;
         width: 14px;
         height: auto;
         top: 11.3px;
         left: 11.3px;
+
+        @media ($desktop-breakpoint) {
+          text-align: center;
+          width: 11px;
+          height: auto;
+          top: 9.1px;
+          left: 74px;
+        }
     }
       
       .input-form {
@@ -33,9 +98,15 @@ header {
         background: rgba(118, 118, 128, 0.12);
         border: 0.5px solid #0000001a;
         border-radius: 10px;
-      
+        
         &:focus {
           outline: none;
+        }
+        @media ($desktop-breakpoint) {
+          height: 25px;  
+          text-align: center;
+          width: 150px;
+          border-radius: 3px;
         }
       }
   
@@ -45,7 +116,12 @@ header {
         height: 20px;
         align-self: center;
         cursor: pointer;
+
+        @media ($desktop-breakpoint) {
+          display: none;
+        }
       }
+      
     }
   
     .btn-container {
@@ -53,7 +129,12 @@ header {
       display: flex;
       align-items: flex-start;
       flex-direction: row;
-  
+      
+      @media ($desktop-breakpoint) {
+        display: flex;
+        position: relative;
+        right: 32rem;
+      }
       .btn-search{
         padding: 0 10px;
         margin-right: 6px;
@@ -68,6 +149,10 @@ header {
         line-height: 17px;
         letter-spacing: -0.2px;
         color: #262626;
+
+        &:focus {
+          outline: none;
+        }
       }
         .img {
           margin: 6px 0px;
@@ -77,12 +162,31 @@ header {
 }
 
 .img-container {
+  @media ($desktop-breakpoint) {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-content: center;
+    justify-content: center;
+  }
   .search-img-container {
+    @media ($desktop-breakpoint) {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 50%;
+      height: auto;
+    }
     .search-img {
       width: 120px;
       height: 119.53px;
       margin: 0px 0px;
-      border: 1px solid  rgba(60, 60, 67, 0.18);;
+      border: 1px solid  rgba(60, 60, 67, 0.18);
+
+      @media ($desktop-breakpoint) {
+        display: flex;
+        width: 220px;
+        height: 200px;
+      }
     }  
   }
 }
